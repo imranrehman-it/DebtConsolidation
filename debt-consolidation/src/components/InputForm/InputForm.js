@@ -1,10 +1,14 @@
 import React from 'react'
 import {InputLabel} from './InputLabel'
+import {DebtType} from './Inputs/DebtType'
+import {RemainingDebt} from './Inputs/RemainingDebt'
+import {CurrentApr} from './Inputs/CurrentApr'
+import {MonthlyPayment} from './Inputs/MonthlyPayment'
 
 export const InputForm = () => {
   return (
     <>
-      <h2 className="mt-8 text-sm tracking-wider text-slate-900 max-md:max-w-full font-semibold">
+      <h2 className="mt-8 text-sm tracking-wider text-slate-900 font-semibold">
         ENTER YOUR CURRENT DEBTS
       </h2>
       <div className="flex flex-col gap-2 overflow-y-auto mt-3">
@@ -13,22 +17,10 @@ export const InputForm = () => {
           <InputLabel labelText="REMAINING DEBT AMOUNT" />
           <InputLabel labelText="CURRENT APR" />
           <InputLabel labelText="CURRENT MONTHLY PAYMENT" />
-          <input
-            type="number"
-            className="p-2 mt-1 w-full bg-[#F4FBFD] border shadow-inner border-gray-300 text-black"
-          />
-          <input
-            type="number"
-            className="p-2 mt-1 w-full bg-[#F4FBFD] border shadow-inner border-gray-300 text-black"
-          />
-          <input
-            type="number"
-            className="p-2 mt-1 w-full bg-[#F4FBFD] border shadow-inner border-gray-300 text-black"
-          />
-          <input
-            type="number"
-            className="p-2 mt-1 w-full bg-[#F4FBFD] border shadow-inner border-gray-300 text-black"
-          />
+          <DebtType />
+          <RemainingDebt />
+          <CurrentApr />
+          <MonthlyPayment />
           <button
             className="flex items-center gap-1.5 mt-4 text-base text-semibold text-cyan-600"
           >
