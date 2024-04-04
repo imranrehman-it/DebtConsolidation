@@ -3,6 +3,7 @@ import "./CustomSlider.css";
 
 
 export const CustomSlider = ({ min, max, value, unit, startValue, set }) => {
+  //component to render the slider with overlay bar and labels
   const [sliderValue, setSliderValue] = useState(startValue);
   const [step, setStep] = useState(1)
   

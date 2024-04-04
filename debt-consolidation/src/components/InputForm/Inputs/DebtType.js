@@ -10,7 +10,7 @@ const options = [
 ];
 
 export const DebtType = ({value, onChange}) => {
-
+   //component to render the debt type dropdown
    return (
         <>
             <select

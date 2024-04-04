@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const CurrentApr = ({value, onChange}) => {
-
+  //component to render the current APR input
   return (
     <>
       <div className="flex items-center mt-1 border border-gray-300">

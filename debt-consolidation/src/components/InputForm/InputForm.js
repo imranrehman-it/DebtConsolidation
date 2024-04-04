@@ -4,7 +4,6 @@ import {InputRow} from './Inputs/InputRow'
 
 
 export const InputForm = ({debts, addDebt, removeDebt, adjustDebt}) => {
-  
   return (
     <>
       <h2 className="mt-8 text-sm tracking-wider text-slate-900 font-semibold">

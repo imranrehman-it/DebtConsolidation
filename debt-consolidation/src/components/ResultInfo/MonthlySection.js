@@ -12,6 +12,7 @@ export const MonthlySection = ({currentMonthlyPayment, newMonthlyPayment}) => {
 
 
 const NewMonthlyPayment = ({newMonthlyPayment}) => {
+  //component to render the new monthly payment
   return (
       <div className="flex h-1/3 p-5 items-center bg-opacity-5 justify-between">
         <text className="text-[16px] text-black">New Monthly Payment</text>
@@ -23,6 +24,7 @@ const NewMonthlyPayment = ({newMonthlyPayment}) => {
 }
 
 const CurrentMonthlyPayment = ({currentMonthlyPayment}) => {
+  //component to render the current monthly payment
   return (
     <div className="flex h-1/3 p-5 items-center bg-opacity-5 justify-between">
       <text className="text-[16px] text-black">Current Monthly Payment</text>
@@ -34,6 +36,7 @@ const CurrentMonthlyPayment = ({currentMonthlyPayment}) => {
 }
 
 const TotalSavings = ({currentMonthlyPayment, newMonthlyPayment}) => {
+  //component to render the total monthly savings
   return (
     <div className="flex h-1/3 p-5 items-center bg-[#00B290] bg-opacity-5 justify-between">
       <text className="text-[16px] font-semibold text-black ">

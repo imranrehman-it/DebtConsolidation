@@ -4,6 +4,8 @@ import { InputForm } from './components/InputForm/InputForm';
 import { ResultInfo } from './components/ResultInfo/ResultInfo';
 
 export const Modal = () => {
+    //component to render the main modal that will hold the input form and result info
+    
     const [showResult, setShowResult] = useState(false);
     const [debts, setDebts] = useState([
         {
@@ -64,6 +66,7 @@ export const Modal = () => {
   };
 
   const removeDebt = (index) => {
+    //remove debt from the list 
     const newDebts = [...debts];
     if (newDebts.length > 1) {
       newDebts.splice(index, 1);
@@ -75,6 +78,7 @@ export const Modal = () => {
   };
 
   const validInput = () => {
+    //check if all fields are filled
     let valid = true;
     debts.forEach((debt) => {
       if (!debt.remainingDebt || !debt.monthlyPayment || !debt.currentApr) {

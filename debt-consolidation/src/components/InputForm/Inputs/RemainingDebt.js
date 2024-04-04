@@ -2,7 +2,7 @@ import React from 'react'
 
 export const RemainingDebt = ({value, onChange}) => {
   
-
+  //component to render the remaining debt input
   return (
     <>
       <div className="flex items-center mt-1 border border-gray-300">

@@ -10,6 +10,7 @@ export const InputRow = ({
   removeDebt,
   itemKey,
 }) => {
+  //component to render the row of inputs for debt type, remaining debt, current APR, and monthly payment
   return (
     <div className="flex flex-row">
       <div className="grid grid-cols-4 gap-4 text-base">

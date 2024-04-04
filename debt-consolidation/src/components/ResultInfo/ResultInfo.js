@@ -5,6 +5,7 @@ import {LoanConfiguration} from './LoanConfiguration'
 import {calculateCurrentTotalRepayment, calculateNewMonthlyPayment, calculateNewTotalRepayment} from '../../utilities/calculation'
 
 export const ResultInfo = ({debts, setShowResult}) => {
+  //component to render the result info after user has input their debts
   const [apr, setApr] = useState(8);
   const [term, setTerm] = useState(24);
 

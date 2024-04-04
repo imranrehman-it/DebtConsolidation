@@ -11,6 +11,7 @@ export const RepaymentSection = ({currentTotalRepayment, newTotalRepayment}) => 
 }
 
 const NewTotalRepayment = ({newTotalRepayment}) => {
+  //component to render the new total repayment
   return (
     <div className="flex h-1/3 p-5 items-center bg-opacity-5 justify-between">
       <text className="text-[16px] text-black">New Total Repayment</text>
@@ -24,6 +25,7 @@ const NewTotalRepayment = ({newTotalRepayment}) => {
 
 const CurrentTotalRepayment = ({currentTotalRepayment}) => {
   return (
+    //component to render the current total repayment
     <div className="flex h-1/3 p-5 items-center bg-opacity-5 justify-between">
       <text className="text-[16px] text-black">Current Total Repayment</text>
       <text className="text-center text-[20px] text-black">
@@ -35,6 +37,7 @@ const CurrentTotalRepayment = ({currentTotalRepayment}) => {
 
 const TotalSavings = ({currentTotalRepayment, newTotalRepayment}) => {
   return (
+    //component to render the total repayment savings
     <div className="flex h-1/3 p-5 items-center bg-[#00B290] bg-opacity-5 justify-between">
       <text className="text-[16px] font-semibold text-black ">
         Total Repayment Savings

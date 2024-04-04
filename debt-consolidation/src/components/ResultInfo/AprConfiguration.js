@@ -2,6 +2,7 @@ import React from 'react'
 import {CustomSlider} from '../common/CustomSlider'
 
 export const AprConfiguration = ({apr, setApr}) => {
+  //component to render the APR slider and desired APR value
   return (
     <div className="flex flex-row items-center justify-between">
       <div className="flex flex-col">

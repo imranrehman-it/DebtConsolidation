@@ -3,6 +3,7 @@ import {AprConfiguration} from './AprConfiguration'
 import {TermConfiguration} from './TermConfiguration'
 
 export const LoanConfiguration = ({
+  //component to render the loan configuration sliders for APR and term
   apr,
   term,
   setApr,
