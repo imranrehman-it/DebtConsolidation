@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
 import {InputLabel} from './InputLabel'
 import {InputRow} from './Inputs/InputRow'
+import {ResultInfo} from '../ResultInfo/ResultInfo'
 
 export const InputForm = () => {
+  const [showResult, setShowResult] = useState(false)
   const [debts, setDebts] = useState([{
     debtName: 'Credit Card',
     remainingDebt: 5000,
@@ -27,6 +29,7 @@ export const InputForm = () => {
       window.alert("Please fill out all fields")
       return
     }
+    setShowResult(!showResult)
   }
 
 
@@ -113,12 +116,6 @@ export const InputForm = () => {
           <span>Add Another Debt</span>
         </button>
       </div>
-      <button
-        className="w-full p-2 mt-6 text-base text-white bg-[#06A9DB] rounded"
-        onClick={handleCalculate}
-      >
-        Calculate Savings
-      </button>
     </>
   );
 }
