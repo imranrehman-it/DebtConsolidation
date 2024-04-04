@@ -12,7 +12,7 @@ export const TermConfiguration = ({term, setTerm}) => {
           {term} months
         </text>
       </div>
-      <CustomSlider min={12} max={64} value={term} unit=" mo" startValue={24} set={setTerm} />
+      <CustomSlider min={12} max={60} value={term} unit=" mo." startValue={24} set={setTerm} />
     </div>
   );
 }

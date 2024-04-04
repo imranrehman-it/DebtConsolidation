@@ -47,13 +47,31 @@ export const ResultInfo = ({debts, setShowResult}) => {
 
   return (
     <div className="flex flex-col w-full h-full">
-      <text onClick={() => setShowResult(prev => !prev)} className="text-[14px] tracking-wider text-[#06A9DB] mt-1 p-2 font-semibold">
-        Update Your Current Debts
-      </text>
-      <LoanConfiguration apr={apr} term={term} setApr={setApr} setTerm={setTerm} />
+        <text
+          onClick={() => setShowResult((prev) => !prev)}
+          className="text-[16px] tracking-wider text-[#06A9DB] mt-1 p-2 font-semibold hover:cursor-pointer hover:text-[#06A9DB]/80"
+        >
+          <span className="text-[20px] tracking-wider text-[#06A9DB] mr-2 font-bold hover:cursor-pointer hover:text-[#06A9DB]/80">
+            ←
+          </span>
+          Update Your Current Debts
+        </text>
+
+      <LoanConfiguration
+        apr={apr}
+        term={term}
+        setApr={setApr}
+        setTerm={setTerm}
+      />
       <div className="flex flex-row h-1/3">
-        <RepaymentSection currentTotalRepayment={currentTotalRepayment} newTotalRepayment={newTotalRepayment}/>
-        <MonthlySection  currentMonthlyPayment={currentMonthlyPayment} newMonthlyPayment={newMonthlyPayment}/>
+        <RepaymentSection
+          currentTotalRepayment={currentTotalRepayment}
+          newTotalRepayment={newTotalRepayment}
+        />
+        <MonthlySection
+          currentMonthlyPayment={currentMonthlyPayment}
+          newMonthlyPayment={newMonthlyPayment}
+        />
       </div>
     </div>
   );
