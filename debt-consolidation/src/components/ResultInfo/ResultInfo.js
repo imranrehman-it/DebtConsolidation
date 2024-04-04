@@ -6,7 +6,7 @@ import {LoanConfiguration} from './LoanConfiguration'
 export const ResultInfo = () => {
   return (
     <div className="flex flex-col w-full h-full">
-      <text className="text-[14px] tracking-wider text-[#06A9DB] mt-1 mb-1 p-4 font-semibold">
+      <text className="text-[14px] tracking-wider text-[#06A9DB] mt-1 p-2 font-semibold">
         Update Your Current Debts
       </text>
       <LoanConfiguration />
