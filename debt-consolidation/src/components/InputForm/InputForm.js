@@ -17,6 +17,7 @@ export const InputForm = () => {
   }
 ])
 
+
   const adjustDebt = (index, field, value) => {
     let invalidInput = false;
     const newDebts = [...debts];
@@ -77,7 +78,7 @@ export const InputForm = () => {
       <h2 className="mt-8 text-sm tracking-wider text-slate-900 font-semibold">
         ENTER YOUR CURRENT DEBTS
       </h2>
-      <div className="flex flex-col gap-2 overflow-y-auto mt-3">
+      <div className="flex flex-col gap-1 overflow-y-auto mt-3">
         <div className="grid grid-cols-4 gap-4">
           <InputLabel labelText="DEBT NAME" />
           <InputLabel labelText="REMAINING DEBT AMOUNT" />
@@ -94,7 +95,7 @@ export const InputForm = () => {
         ))}
         <button
           onClick={addDebt}
-          className="flex items-center gap-1.5 mt-4 text-base text-semibold text-cyan-600"
+          className="flex items-center gap-1 mt-4 text-base text-semibold text-cyan-600"
         >
           <span className="font-bold">+</span>
           <span>Add Another Debt</span>
