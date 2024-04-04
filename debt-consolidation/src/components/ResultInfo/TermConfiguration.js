@@ -1,8 +1,9 @@
 import React from 'react'
+import {CustomSlider} from '../common/CustomSlider'
 
 export const TermConfiguration = () => {
   return (
-    <div className="flex flex-row items-center">
+    <div className="flex flex-row items-center justify-between">
       <div className="flex flex-col">
         <text className="text-[12px] font-semibold text-slate-900">
           DESIRED LOAN TERM
@@ -11,7 +12,7 @@ export const TermConfiguration = () => {
           24 months
         </text>
       </div>
-      {/*slider will go here*/}
+      <CustomSlider min={12} max={64} value={24} unit=" mo" startValue={24} set={() => {}} />
     </div>
   );
 }

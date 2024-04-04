@@ -13,8 +13,10 @@ export const LoanConfiguration = () => {
           Use the slider below to simulate the new APR and loan term.
         </text>
       </div>
-      <AprConfiguration />
-      <TermConfiguration />
+      <div className="flex flex-col w-2/3 gap-5">
+        <AprConfiguration />
+        <TermConfiguration />
+      </div>
     </div>
   );
 }
