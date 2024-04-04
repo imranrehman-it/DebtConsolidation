@@ -17,6 +17,18 @@ export const InputForm = () => {
   }
 ])
 
+  const isValid = () => {
+    return debts.every(debt => debt.remainingDebt && debt.monthlyPayment && debt.currentApr)
+  }
+
+  const handleCalculate = () => {
+    console.log(isValid())
+    if(!isValid()){
+      window.alert("Please fill out all fields")
+      return
+    }
+  }
+
 
   const adjustDebt = (index, field, value) => {
     let invalidInput = false;
@@ -103,6 +115,7 @@ export const InputForm = () => {
       </div>
       <button
         className="w-full p-2 mt-6 text-base text-white bg-[#06A9DB] rounded"
+        onClick={handleCalculate}
       >
         Calculate Savings
       </button>
