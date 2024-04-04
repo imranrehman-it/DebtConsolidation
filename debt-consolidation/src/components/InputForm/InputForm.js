@@ -18,27 +18,58 @@ export const InputForm = () => {
 ])
 
   const adjustDebt = (index, field, value) => {
-    const newDebt = [...debts]
-    newDebt[index][field] = value
-    setDebts(newDebt)
-  }
+    let invalidInput = false;
+    const newDebts = [...debts];
+    if (value === "0") {
+      window.alert("Debt Amount or Monthly Payment cannot be 0");
+      invalidInput = true;
+      return;
+    }
+    if (!invalidInput) {
+      newDebts[index][field] = value;
+      setDebts(newDebts);
+    }
+  };
 
   const addDebt = () => {
-    const newDebt = [...debts]
-    newDebt.push({
-      debtName: 'Credit Card',
-      remainingDebt: 0,
-      currentApr: 0,
-      monthlyPayment: 0
-    })
-    setDebts(newDebt)
-  }
+    let invalidInput = false;
+    debts.forEach((debt) => {
+      if (
+        debt.remainingDebt === 0 ||
+        debt.monthlyPayment === 0 ||
+        !debt.remainingDebt ||
+        !debt.monthlyPayment ||
+        !debt.currentApr
+      ) {
+        invalidInput = true;
+        return;
+      }
+    });
+    if (invalidInput) {
+      window.alert("Debt Amount or Monthly Payment cannot be 0 or empty");
+      return;
+    }
+    setDebts([
+      ...debts,
+      {
+        debtName: "Credit Card",
+        remainingDebt: null,
+        currentApr: null,
+        monthlyPayment: null,
+      },
+    ]);
+  };
 
   const removeDebt = (index) => {
-    const newDebt = [...debts]
-    newDebt.splice(index, 1)
-    setDebts(newDebt)
-  }
+    const newDebts = [...debts];
+    if (newDebts.length > 1) {
+      newDebts.splice(index, 1);
+    } else {
+      window.alert("You must have at least one debt");
+      return;
+    }
+    setDebts(newDebts);
+  };
 
 
   return (
@@ -69,6 +100,11 @@ export const InputForm = () => {
           <span>Add Another Debt</span>
         </button>
       </div>
+      <button
+        className="w-full p-2 mt-6 text-base text-white bg-[#06A9DB] rounded"
+      >
+        Calculate Savings
+      </button>
     </>
   );
 }
