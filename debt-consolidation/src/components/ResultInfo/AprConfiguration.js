@@ -8,7 +8,7 @@ export const AprConfiguration = ({apr, setApr}) => {
         <text className="text-[12px] font-semibold text-slate-900">
           DESIRED APR
         </text>
-        <text className="text-[24px] font-semibold text-[#06A9DB]">{apr}.00%</text>
+        <text className="text-[24px] font-semibold text-[#06A9DB]">{parseFloat(apr).toFixed(2)}%</text>
       </div>
       <CustomSlider min={4} max={36} value={apr} unit="%" startValue={8} set={setApr} />
     </div>

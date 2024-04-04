@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CustomSlider.css";
 
 
 export const CustomSlider = ({ min, max, value, unit, startValue, set }) => {
   const [sliderValue, setSliderValue] = useState(startValue);
+  const [step, setStep] = useState(1)
+  
+  useEffect(() => {
+     if (unit === "%") {
+       setStep(0.10);
+     }
+  }, [unit])
+ 
 
   const handleChange = (e) => {
     setSliderValue(e.target.value);
@@ -16,6 +24,7 @@ export const CustomSlider = ({ min, max, value, unit, startValue, set }) => {
         type="range"
         min={min}
         max={max}
+        step={step}
         value={sliderValue}
         onChange={handleChange}
         className="slider"
