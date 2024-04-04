@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-export const MonthlyPayment = () => {
-    const [value, setValue] = useState('')
+export const MonthlyPayment = ({value, onChange}) => {
+
   return (
     <>
       <div className="flex items-center mt-1 border border-gray-300">
@@ -13,7 +13,7 @@ export const MonthlyPayment = () => {
           value={value}
           className="p-2 w-full bg-[#F4FBFD] border-l shadow-inner border-gray-300 text-black"
           placeholder="Amount"
-          onChange={(e) => setValue(e.target.value)}
+          onChange={onChange}
         />
       </div>
     </>

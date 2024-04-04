@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 const options = [
@@ -9,14 +9,14 @@ const options = [
   "Other"
 ];
 
-export const DebtType = () => {
-   const [value, setValue] = useState('')
+export const DebtType = ({value, onChange}) => {
+
    return (
         <>
             <select
             type="text"
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={onChange}
             className="bg-[#F4FBFD] border border-gray-300 shadow-inner p-2 mt-1 w-full text-black"
             >
             {options.map((option) => (

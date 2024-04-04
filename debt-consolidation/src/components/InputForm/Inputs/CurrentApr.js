@@ -1,14 +1,14 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-export const CurrentApr = () => {
-    const [value, setValue] = useState('')
+export const CurrentApr = ({value, onChange}) => {
+
   return (
     <>
       <div className="flex items-center mt-1 border border-gray-300">
         <input
           type="number"
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={onChange}
           className="p-2 w-full bg-[#F4FBFD] border-r border-gray-300 shadow-inner text-black"
           placeholder="APR"
         />

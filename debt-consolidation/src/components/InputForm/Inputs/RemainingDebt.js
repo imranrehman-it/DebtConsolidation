@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-export const RemainingDebt = () => {
-    const [value, setValue] = useState('')
+export const RemainingDebt = ({value, onChange}) => {
+  
 
   return (
     <>
@@ -12,7 +12,7 @@ export const RemainingDebt = () => {
         <input
           type="number"
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={onChange}
           className="p-2 w-full bg-[#F4FBFD] text-black border-l shadow-inner border-gray-300"
           placeholder="Amount"
         />
