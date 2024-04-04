@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const MonthlySection = () => {
+export const MonthlySection = ({currentMonthlyPayment}) => {
   return (
     <div className="w-1/2 text-black border shadow-inner border-gray-3000">
       <div className="flex h-1/3 p-5 items-center bg-opacity-5 justify-between">
@@ -12,7 +12,7 @@ export const MonthlySection = () => {
       <div className="flex h-1/3 p-5 items-center bg-opacity-5 justify-between">
         <text className="text-[16px] text-black">Current Monthly Payment</text>
         <text className="text-left text-[20px] text-black">
-          $450
+          ${parseFloat(currentMonthlyPayment).toFixed(2)}
         </text>
       </div>
       <div className="flex h-1/3 p-5 items-center bg-[#00B290] bg-opacity-5 justify-between">

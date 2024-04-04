@@ -1,27 +1,10 @@
 import React, {useState} from 'react'
 import {InputLabel} from './InputLabel'
 import {InputRow} from './Inputs/InputRow'
-import {ResultInfo} from '../ResultInfo/ResultInfo'
+
 
 export const InputForm = ({debts, addDebt, removeDebt, adjustDebt}) => {
   
-
-  // const isValid = () => {
-  //   return debts.every(debt => debt.remainingDebt && debt.monthlyPayment && debt.currentApr)
-  // }
-
-  // const handleCalculate = () => {
-  //   console.log(isValid())
-  //   if(!isValid()){
-  //     window.alert("Please fill out all fields")
-  //     return
-  //   }
-  //   setShowResult(!showResult)
-  // }
-
-
-  
-
   return (
     <>
       <h2 className="mt-8 text-sm tracking-wider text-slate-900 font-semibold">

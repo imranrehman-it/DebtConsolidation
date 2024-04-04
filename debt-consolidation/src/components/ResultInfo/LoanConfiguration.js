@@ -2,7 +2,12 @@ import React from 'react'
 import {AprConfiguration} from './AprConfiguration'
 import {TermConfiguration} from './TermConfiguration'
 
-export const LoanConfiguration = () => {
+export const LoanConfiguration = ({
+  apr,
+  term,
+  setApr,
+  setTerm,
+}) => {
   return (
     <div className="flex flex-col text-black border shadow-inner border-gray-300 p-5 gap-5">
       <div className="flex flex-col">
@@ -14,9 +19,9 @@ export const LoanConfiguration = () => {
         </text>
       </div>
       <div className="flex flex-col w-2/3 gap-5">
-        <AprConfiguration />
-        <TermConfiguration />
+        <AprConfiguration apr={apr} setApr={setApr} />
+        <TermConfiguration term={term} setTerm={setTerm} />
       </div>
     </div>
   );
-}
+};
