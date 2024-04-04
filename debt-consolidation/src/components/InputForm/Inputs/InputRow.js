@@ -7,6 +7,7 @@ import {MonthlyPayment} from './MonthlyPayment'
 export const InputRow = ({
   debt,
   adjustDebt,
+  removeDebt,
   itemKey,
 }) => {
   return (
@@ -31,7 +32,7 @@ export const InputRow = ({
           }
         />
       </div>
-      <button onClick={() => console.log("remove")}>x</button>
+      <button onClick={() => removeDebt(itemKey)}>x</button>
     </div>
   );
 };

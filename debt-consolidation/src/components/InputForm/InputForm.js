@@ -23,6 +23,23 @@ export const InputForm = () => {
     setDebts(newDebt)
   }
 
+  const addDebt = () => {
+    const newDebt = [...debts]
+    newDebt.push({
+      debtName: 'Credit Card',
+      remainingDebt: 0,
+      currentApr: 0,
+      monthlyPayment: 0
+    })
+    setDebts(newDebt)
+  }
+
+  const removeDebt = (index) => {
+    const newDebt = [...debts]
+    newDebt.splice(index, 1)
+    setDebts(newDebt)
+  }
+
 
   return (
     <>
@@ -40,11 +57,12 @@ export const InputForm = () => {
           <InputRow
             debt={debt}
             itemKey={index}
-            {...debt}
+            removeDebt={removeDebt}
             adjustDebt={adjustDebt}
           />
         ))}
         <button
+          onClick={addDebt}
           className="flex items-center gap-1.5 mt-4 text-base text-semibold text-cyan-600"
         >
           <span className="font-bold">+</span>
